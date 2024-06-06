@@ -1,0 +1,57 @@
+#server:
+#  port: '9090'
+#
+#spring:
+# cloud:
+#   gateway:
+#     routes:
+#       - id: userapi
+#         uri: lb://userapi
+#         predicates:
+#           - Path=/user/**
+#         filters:
+#           - AuthenticationFilter
+#
+#
+#       - id: pedidoapi
+#         uri: lb://pedidoapi
+#         predicates:
+#           - Path=/pedido/**
+#         filters:
+#           - AuthenticationFilter
+#
+#       - id: produtoapi
+#         uri: lb://produtoapi
+#         predicates:
+#           - Path=/produto/**
+#         filters:
+#           - AuthenticationFilter
+#           
+#       - id: produtoapi
+#         uri: lb://produtoapi
+#         predicates:
+#           - Path=/categoria/**
+#         filters:
+#           - AuthenticationFilter
+#
+#       - id: produtoapi
+#         uri: lb://produtoapi
+#         predicates:
+#           - Path=/subcategoria/**
+#         filters:
+#           - AuthenticationFilter
+#           
+#       - id: authserver
+#         uri: lb://authserver
+#         predicates:
+#           - Path=/auth/**
+##         filters:
+##           - AuthenticationFilter
+#
+# application:
+#   name: cloudgateway
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone : http://localhost:8761/eureka/
